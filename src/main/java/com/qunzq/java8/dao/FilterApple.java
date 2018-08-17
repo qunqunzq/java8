@@ -23,10 +23,21 @@ public class FilterApple {
         return newList;
     }
 
+    public static List<Apple> findAppleByColor(List<Apple> list,String color){
+        List<Apple> newList = new ArrayList<>();
+        for(Apple apple : list){
+            if(color.equals(apple.getColor())){
+                newList.add(apple);
+            }
+        }
+        return newList;
+    }
+
     public static void main(String[] args) {
         List<Apple> list = Arrays.asList(new Apple("green", 150l), new Apple("green", 160l), new Apple("yellow", 150l));
-        List<Apple> greenApple = findGreenApple(list);
-        System.out.println(greenApple);
+       // List<Apple> greenApple = findGreenApple(list);
+        List<Apple> green = findAppleByColor(list, "green");
+        System.out.println(green);
     }
 
 }
