@@ -53,16 +53,17 @@ public class FilterApple {
        // List<Apple> greenApple = findGreenApple(list);
        // List<Apple> green = findAppleByColor(list, "green");
        // List<Apple> apple = findApple(list, new YellowAppleFilter());
-        List<Apple> apple = findApple(list, new AppleFiter() {
-            @Override
-            public Boolean fiter(Apple apple) {
-                if("yellow".equals(apple.getColor())){
-                    return true;
-                }
-                return false;
-            }
+      /*  List<Apple> green = findApple(list, (Apple apple) -> {
+            return apple.getColor().equals("green");
         });
-        System.out.println(apple);
+        System.out.println(green);*/
+      Thread thread = new Thread(() -> {
+          System.out.println("1");
+      });
+      new Thread(() -> {
+          System.out.println("2");
+      }).start();
+      thread.start();
     }
 
 }
