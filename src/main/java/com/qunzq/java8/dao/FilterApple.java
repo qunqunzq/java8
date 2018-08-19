@@ -1,6 +1,9 @@
 package com.qunzq.java8.dao;
 
 
+import com.qunzq.java8.impl.GreenAppleFilter;
+import com.qunzq.java8.impl.YellowAppleFilter;
+import com.qunzq.java8.inferface.AppleFiter;
 import com.qunzq.java8.model.Apple;
 
 import java.util.ArrayList;
@@ -11,6 +14,7 @@ import java.util.List;
  * Created by Qun on 2018/8/17.
  */
 public class FilterApple {
+
 
 
     public static List<Apple> findGreenApple(List<Apple> list) {
@@ -33,11 +37,32 @@ public class FilterApple {
         return newList;
     }
 
+    public static  List<Apple> findApple(List<Apple> list, AppleFiter appleFiter){
+        List<Apple> newList = new ArrayList<>();
+        for(Apple apple : list){
+            Boolean fiter = appleFiter.fiter(apple);
+            if(fiter){
+                newList.add(apple);
+            }
+        }
+        return newList;
+    }
+
     public static void main(String[] args) {
         List<Apple> list = Arrays.asList(new Apple("green", 150l), new Apple("green", 160l), new Apple("yellow", 150l));
        // List<Apple> greenApple = findGreenApple(list);
-        List<Apple> green = findAppleByColor(list, "green");
-        System.out.println(green);
+       // List<Apple> green = findAppleByColor(list, "green");
+       // List<Apple> apple = findApple(list, new YellowAppleFilter());
+        List<Apple> apple = findApple(list, new AppleFiter() {
+            @Override
+            public Boolean fiter(Apple apple) {
+                if("yellow".equals(apple.getColor())){
+                    return true;
+                }
+                return false;
+            }
+        });
+        System.out.println(apple);
     }
 
 }
