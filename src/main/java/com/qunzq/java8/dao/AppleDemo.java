@@ -15,9 +15,5 @@ public class AppleDemo {
         Converter<String,Integer>  converter = form -> Integer.valueOf(form);
         Integer conver = converter.conver("2");
         System.out.println(conver);
-        System.out.println(conver);
-        System.out.println(conver);
-        System.out.println(conver);
-        System.out.println(conver);
     }
 }
