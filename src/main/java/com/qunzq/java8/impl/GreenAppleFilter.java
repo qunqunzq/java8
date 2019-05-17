@@ -14,4 +14,8 @@ public class GreenAppleFilter implements AppleFiter {
         }
         return false;
     }
+    // 求平方根
+     public double sqrt(int a) {
+        return a*a;
+    }
 }
