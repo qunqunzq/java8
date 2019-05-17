@@ -10,7 +10,7 @@ import java.util.Optional;
  */
 public class OptionDemo {
     public static void main(String[] args) {
-        Apple apple = new Apple();
+      /*  Apple apple = new Apple();
         Optional<Apple> empty = Optional.<Apple>empty();
         Optional<Apple> o = Optional.<Apple>ofNullable(null);
         Apple apple1 = o.orElse(new Apple());
@@ -18,11 +18,11 @@ public class OptionDemo {
         cc.setApple(apple);
         apple.setWeight(11l);
         Optional<Car> car = Optional.ofNullable(cc);
-       /* car.orElseThrow(()->new RuntimeException("没"));
+       *//* car.orElseThrow(()->new RuntimeException("没"));
         car.orElse(createCar());
-        car.orElseGet(()-> createCar() );*/
+        car.orElseGet(()-> createCar() );*//*
         Long aLong = car.map(u -> u.getApple()).map(a -> a.getWeight()).orElse(12344444l);
-        System.out.println(aLong);
+        System.out.println(aLong);*/
     }
 
     public static Car createCar(){

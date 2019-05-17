@@ -83,12 +83,12 @@ public class PredicateDemo {
         int maxValue = Integer.MAX_VALUE;
         long maxValue1 = Long.MAX_VALUE;
         Supplier<Apple> supplier = () -> new Apple("123", (long) 123);
-        Supplier<Apple> supplier1 = Apple::new;
+      /*  Supplier<Apple> supplier1 = Apple::new;
         Apple apple = supplier.get();
         Consumer<String> consumers = o -> System.out.println(o);
         consumers.accept("1");
         System.out.println(supplier1);
-
+*/
 
     }
 }
