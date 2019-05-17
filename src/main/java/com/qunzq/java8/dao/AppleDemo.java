@@ -16,5 +16,7 @@ public class AppleDemo {
         Integer conver = converter.conver("2");
         System.out.println(conver);
         System.out.println(conver);
+        System.out.println(conver);
+        System.out.println(conver);
     }
 }
