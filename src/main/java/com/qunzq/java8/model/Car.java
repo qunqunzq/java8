@@ -10,6 +10,15 @@ public class Car {
 
     private Apple apple;
 
+    private Person person;
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 
     public Car(String name, String color, Apple apple) {
         this.name = name;
