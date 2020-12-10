@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Java8 {
     public static void main(String[] args) {
+        System.out.println("test");
         List<Car> list = new ArrayList<>();
         Car car= new Car();
         car.setName("baoma");
