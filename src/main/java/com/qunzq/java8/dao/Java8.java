@@ -14,14 +14,12 @@ public class Java8 {
         Car car= new Car();
         car.setName("baoma");
         car.setName("haha");
-        car.setName("haha");
         list.add(car);
         String.valueOf(1);
         BigInteger bigInteger = new BigInteger("2");
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("count",list);
         System.out.println(jsonObject.toString());
-        System.out.println("2222222");
 
     }
 }
