@@ -14,6 +14,7 @@ public class Java8 {
         Car car= new Car();
         car.setName("baoma");
         car.setName("haha");
+        car.setName("haha");
         list.add(car);
         String.valueOf(1);
         BigInteger bigInteger = new BigInteger("2");
