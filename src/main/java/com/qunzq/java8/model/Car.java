@@ -20,6 +20,11 @@ public class Car {
     public Car() {
     }
 
+    public Car(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
     public Apple getApple() {
         return apple;
     }
